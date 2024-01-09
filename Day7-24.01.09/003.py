@@ -28,3 +28,5 @@ for item in numbers:
         isFind = True
 if isFind == False:
     print(False)
+
+# git 배웠지롱
