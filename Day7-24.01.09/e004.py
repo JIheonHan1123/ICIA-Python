@@ -45,7 +45,6 @@ hap(3, 5.9)  # 도움말 갖다대면 결과가 None이 나옴
 
 
 #########
-#
 def hap2(a: int | float, b: int | float):
     return a+b  # return: 함수를 종료하고 결과로 바꿔라
 

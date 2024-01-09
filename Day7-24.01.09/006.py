@@ -9,7 +9,8 @@ def print_menu():
 
 def input_select():
     sel = input('메뉴번호 선택>> ')
-    return sel
+    return sel  # 입력만 받고 끝이 아니라 그 값을 반환해야 한다.
+    # 반환해주지 않으면 본문에 있는 select 변수에는 어떤 값도 할당되지 않는다.
 
 
 def add_value():
