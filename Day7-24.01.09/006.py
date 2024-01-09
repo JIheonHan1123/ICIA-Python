@@ -9,7 +9,7 @@ def print_menu():
 
 def input_select():
     sel = input('메뉴번호 선택>> ')
-
+    return sel
 
 def add_value():
     value = int(input('추가할 값 입력>> '))
