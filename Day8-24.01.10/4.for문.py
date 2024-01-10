@@ -83,16 +83,15 @@ print(result)
 '''
 
 # ex8) 1~100사이의 5과 7의 공배수를 출력
+'''
 for i in range(1, 101):
     if i % 5 == 0 and i % 7 == 0:
         print(i)
-
+'''
 
 # ex9) 1~100사이의 5의 배수와 7의 배수를 출력. 단 공배수는 제외
 for i in range(1, 101):
     if i % 5 == 0 and i % 7 == 0:
         continue
-    elif i % 5 == 0:
-        print(i)
-    elif i % 7 == 0:
-        print(i)
+    elif i % 5 == 0 or i % 7 == 0:
+        print(i, end=" ")
