@@ -32,7 +32,67 @@ for x in range(11):
 # 코드 전개하기 전에 생각을 하자
 # step1) for가 필요한가? -> O
 # step2) if가 필요한가? -> X
+'''
 result = 0
 for i in range(1, 6):
     result = result + i
 print(result)
+'''
+
+# ex4) 1에서 10까지의 합계 =55
+'''
+result = 0
+for i in range(1, 11):
+    result = result + i
+print(result)
+'''
+
+# ex5) 1에서 10사이의 3의배수 출력
+'''
+for i in range(1, 11):
+    if i % 3 == 0:
+        print(i)
+'''
+
+# ex6) ex5의 조건을 반대로
+'''
+for i in range(1, 11):
+    if i % 3 != 0:
+        continue  # skip
+    print(i)
+'''
+# cf) break vs continue
+# break: 반복을 중단 -> 반복을 아예 끝내는거임
+# continue: 반복을 스킵 -> continue는 맨 처음에 와야함
+
+
+# ex7) 1에서 10사이의 3의배수들의 합계 출력 => 18
+'''
+result=0
+for i in range(1,11):
+    if i%3==0:
+        result+=i
+print(result)
+
+result = 0
+for i in range(1, 11):
+    if i % 3 != 0:
+        continue
+    result += i
+print(result)
+'''
+
+# ex8) 1~100사이의 5과 7의 공배수를 출력
+for i in range(1, 101):
+    if i % 5 == 0 and i % 7 == 0:
+        print(i)
+
+
+# ex9) 1~100사이의 5의 배수와 7의 배수를 출력. 단 공배수는 제외
+for i in range(1, 101):
+    if i % 5 == 0 and i % 7 == 0:
+        continue
+    elif i % 5 == 0:
+        print(i)
+    elif i % 7 == 0:
+        print(i)
