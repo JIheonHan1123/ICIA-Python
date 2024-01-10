@@ -31,7 +31,10 @@ def delete_number():
     for num in numbers:
         if value == num:
             del numbers[idx]
+        else:
+            print('여기서 하면 4번나옴')
         idx += 1
+
 
 
 while True:
