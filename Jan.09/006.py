@@ -36,7 +36,6 @@ def delete_number():
         idx += 1
 
 
-
 while True:
     print_menu()
     select = input_select()
