@@ -28,20 +28,30 @@ def add_todo():
     title = input('할일입력>> ')
     todos.append({'tno': tno, 'title': title, 'finish': False})
     tno = tno + 1
+    print_todos()
 
 
 def toggle_finish():
-    tog_tno = int(input('완료한 일 번호입력>> '))
+    tog_tno = int(input('변경할 일 번호입력>> '))
+    found = False
     for todo in todos:
         if tog_tno == todo['tno']:
             todo['finish'] = not todo['finish']
+            found = True
+            print_todos()
+    if found == False:
+        print('번호를 제대로 입력하세요')
 
 
 def delete_todo():
     del_tno = int(input('삭제할일 번호입력>> '))
+    found = False
     for todo in todos:
         if del_tno == todo['tno']:
             todos.remove(todo)
+            print_todos()
+    if found == False:
+        print('번호를 제대로 입력하세요')
 
 
 while True:
@@ -52,13 +62,10 @@ while True:
         print_todos()
     elif select == '2':
         add_todo()
-        print_todos()
     elif select == '3':
         toggle_finish()
-        print_todos()
     elif select == '4':
         delete_todo()
-        print_todos()
     elif select == '999':
         print('이용해주셔서 감사합니다')
         break
