@@ -27,8 +27,8 @@ for x in list1:
 print(total/length)
 
 # list1에서 70점 이상인 점수의 개수
-size=0
+size = 0
 for x in list1:
-    if x>=70:
-        size+=1
+    if x >= 70:
+        size += 1
 print(size)
