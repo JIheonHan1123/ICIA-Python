@@ -69,3 +69,6 @@ while True:
     elif select == '999':
         print('이용해주셔서 감사합니다')
         break
+    else:
+        print('잘못된 메뉴선택입니다. \n다시 선택해주세요.')
+        
