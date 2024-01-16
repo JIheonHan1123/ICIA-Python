@@ -24,7 +24,7 @@ a = random.random()
 # range() 값을 생성한다.
 # 예) for i in range(5) -> 0 1 2 3 4
 
-# 10보다 작은 실수
+# 10보다 작은 정수
 for i in range(5):
     b = int(random.random() * 10)
     print(b)
