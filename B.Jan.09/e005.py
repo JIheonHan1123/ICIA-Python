@@ -3,6 +3,8 @@ import e004
 from e004 import hello  # 이거 안하면 e004.hello()라고 해야하고 이거 해주면 그냥 hello()만해도 됨
 from e004 import hello, python  # 이렇게 여러개 import할 수 있다.
 
+hello()
+
 # e004에 파이썬이라고 출력하는 함수를 정의하고 e005.py에서 출력
 e004.python()
 python()

@@ -33,7 +33,7 @@ print('p' in lang)
 print(lang[-1])  # n
 # 뒤에서부터 세는 경우
 # aaa.hwp, dfadsr.hwp 이런 파일이 있다 했을 때 확장자만 확인하려면 뒤에서부터 세는게 편함
-# 앞에서부터 시작하는게 0이기 때문에 뒤에서 부터 시작하는건 -1로 시작한다.
+# 앞에서부터 시작하는게 0이기 때문에 뒤에서 부터 시작하는건 -1로 시작한다.90
 
 # 부분적으로 자를 때
 string = '123456789'
@@ -65,7 +65,3 @@ print("남자" if gender == '1' else "여자")
 # gender가 1또는3또는5면 남자, 아니면 여자
 print("남자" if gender == '1' or gender == '3' or gender == '5' else '여자')
 print("남자" if gender in ('1', '3', '5') else '여자')
-
-
-
-
