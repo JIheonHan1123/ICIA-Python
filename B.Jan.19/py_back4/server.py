@@ -21,6 +21,7 @@ def month_result():
     # elif 6 <= month <= 8:
     #     season = '여름'
     # return render_template('result2.html', month=month, season=season)
+    # 근데 이렇게 하면 글자별 색상 변경하는 것 때문에 html에서 또 {% if문 %}을 써야한다
 
 
 app.run(debug=True)
