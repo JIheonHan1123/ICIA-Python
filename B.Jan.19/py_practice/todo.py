@@ -31,4 +31,15 @@ def do_write():
     return redirect("/list")
 
 
+@app.route('/delete', methods=['post'])
+def delete():
+    tno = request.form.get('tno', type=int)
+    for todo in todos:
+        if tno == todo['tno']:
+            todos.remove(todo)
+            break
+
+    return redirect("/list")
+
+
 app.run(debug=True)

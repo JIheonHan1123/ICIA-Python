@@ -21,7 +21,14 @@
         <tr>
           <td>{{todo.tno}}</td>
           <td>{{todo.title}}</td>
-          <td><button class="btn btn-danger">삭제</button></td>
+          <td>
+            <form action="/delete" method="post">
+              <!-- 서버로 넘어가는건 input, select이기 때문에 input만들어야함 -->
+              <!-- 서버로 값이 넘어가야 하는데 사용자에게 보여줄필요가 없기때문에 hidden을 준다 -->
+              <input type="hidden" value="{{todo.tno}}" name="tno" />
+              <button class="btn btn-danger">삭제</button>
+            </form>
+          </td>
         </tr>
         {% endfor %}
       </tbody>
