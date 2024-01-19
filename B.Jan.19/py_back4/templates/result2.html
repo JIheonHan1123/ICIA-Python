@@ -7,14 +7,6 @@
     <link rel="stylesheet" href="/static/main.css" />
   </head>
   <body>
-    {% if month in [12,1,2] %}
-    <p class="winter">겨울</p>
-    {% elif month in [3,4,5] %}
-    <p class="spring">봄</p>
-    {% elif month in [6,7,8] %}
-    <p class="summer">여름</p>
-    {% else %}
-    <p class="fall">가을</p>
-    {% endif %}
+    <p class="{{style}}">{{season}}</p>
   </body>
 </html>

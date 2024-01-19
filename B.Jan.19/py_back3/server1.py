@@ -28,6 +28,7 @@ def work_print():
     # html에서 계산
     # html에서 바로 하는게 좀 더 간단함(파이썬 코드가 간단해서 그럼)
     # 저렇게 계산 안하고 바로 html파일 {% %}부분에 if age>18 이런식으로 걸어주면 됨
+    # 근데 웬만하면 front가 복잡한거보다 back이 복잡한게 더 나아서 파이썬에서 작업하자
 
     return render_template('work_print.html', name=inputname, age=inputage, is_adult=is_adult)
 
