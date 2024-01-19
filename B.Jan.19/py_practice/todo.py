@@ -33,9 +33,10 @@ def do_write():
 
 @app.route('/delete', methods=['post'])
 def delete():
-    tno = request.form.get('tno', type=int)
+    # 이름 안 같아도 되네?
+    del_tno = request.form.get('tno', type=int)
     for todo in todos:
-        if tno == todo['tno']:
+        if del_tno == todo['tno']:
             todos.remove(todo)
             break
 
