@@ -46,7 +46,9 @@ def name_print():
     # get방식 요청 데이터: request.args
     # post방식 요청 데이터: request.form
     inputname = request.form['inputname']
-    return render_template('name_result.html', rrrname=inputname)
+    age = request.form['age']
+    # 데이터를 1개 받아올 수 있으면 그 이상도 받아올 수 있다.
+    return render_template('name_result.html', rrrname=inputname, age=age)
 
 
 # 현재 서버의 모든 url 출력
