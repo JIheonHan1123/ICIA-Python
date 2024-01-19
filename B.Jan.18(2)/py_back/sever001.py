@@ -50,6 +50,7 @@ def square():
     result = val*val
     # request로 전달받은 값은 무조건 문자
     # => 리턴도 무조건 문자로
+    # => 그냥 플라스크 함수의 리턴은 반드시 문자열이다.
     return f'제곱결과는 {result}입니다'
 
 
@@ -66,5 +67,6 @@ def health():
 
 app.run()
 # app.run(debug=True)
+# debug란 개발모드
 # 이거로 하면 서버 안끄고 계속 수정해도 됨
 # 컴 뒤질수도 있응께 알아서 쓰기
