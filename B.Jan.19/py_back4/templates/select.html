@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        form으로 입력 받을 때 input의 type 속성
+        text, password, number, date, file, select 가 있는데
+        => select는 여러개 중에서 하나를 입력 받는 속성
+
+        이때,
+        1. name속성은 select태그에 준다.
+        2. 선택했을 때의 값은 option태그에 준다
+            option태그에 value속성이 없으면 글자
+        3. 선택을 못하게 하는 속성은 disabled
+        4. selected 속성을 주면 처음부터 선택되어 있게 됨
+        5. (3.)과 (4.)를 한번에 주면 안내 메시지처럼 사용 가능
+
+        ex)
+            <form action="">
+              <select name="gender">
+                <option disabled selected>성별을 선택하세요</option>
+                <option value="male">남자</option>
+                <option value="female">여자</option>
+              </select>
+              <button>보내기</button>
+            </form>
+    -->
+
+    <!-- 12~2 겨울 회색, 3~5 봄 초록, 6~8 여름 파랑, 9~10 가을 보라 -->
+    <form action="/m" method="post">
+      <select name="month">
+        <option disabled selected>월을 선택하세요</option>
+        <option value="1">1월</option>
+        <option value="2">2월</option>
+        <option value="3">3월</option>
+        <option value="4">4월</option>
+        <option value="5">5월</option>
+        <option value="6">6월</option>
+        <option value="7">7월</option>
+        <option value="8">8월</option>
+        <option value="9">9월</option>
+        <option value="10">10월</option>
+        <option value="11">11월</option>
+        <option value="12">12월</option>
+      </select>
+      <button>보내기</button>
+    </form>
+  </body>
+</html>

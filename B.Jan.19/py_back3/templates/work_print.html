@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/main.css" />
+  </head>
+  <body>
+    {# 여기서 {% %}은 파이썬을 html에서 사용하겠다는 표시 #}
+    <p>일반 html 주석은 먹지 않는다!</p>
+
+    {% if is_adult== true %}
+    <p class="blue">{{name}}님은 성년입니다</p>
+    {% else %}
+    <p class="red">{{name}}님은 미성년입니다</p>
+    {% endif %}
+  </body>
+</html>
