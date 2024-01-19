@@ -20,7 +20,7 @@ def month_result():
     #     season = '봄'
     # elif 6 <= month <= 8:
     #     season = '여름'
-    # return render_template('result.html', month=month, season=season)
+    # return render_template('result2.html', month=month, season=season)
 
 
 app.run(debug=True)
