@@ -1,5 +1,5 @@
-# redirect: 새로운 주소로 이동 (post방식)-post로 들어오면 그 데이터를 처리하고 새로운 주소로 이동 (내가 클릭하거나 링크치고 엔터 누르면 리다이렉트임)
-# render_template: html을 출력 (get방식)-get으로 들어오면 화면을 보여준다.
+# redirect: 새로운 주소로 이동 (post방식) -post로 들어오면 그 데이터를 처리하고 새로운 주소로 이동 (내가 클릭하거나 링크치고 엔터 누르면 리다이렉트임)
+# render_template: html을 출력 (get방식) -get으로 들어오면 화면을 보여준다.
 
 from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
@@ -34,7 +34,9 @@ def do_write():
 @app.route('/delete', methods=['post'])
 def delete():
     # 이름 안 같아도 되네?
+    # 뒤에오는 tno와 같아야 하는건 html의 name속성의 값
     del_tno = request.form.get('tno', type=int)
+
     for todo in todos:
         if del_tno == todo['tno']:
             todos.remove(todo)

@@ -5,7 +5,6 @@ app.run()
 '''
 
 from flask import Flask, request, render_template
-# cf) render_template (템플릿을 그린다)
 
 app = Flask(__name__)
 
@@ -15,6 +14,7 @@ app = Flask(__name__)
 def sample1():
     val = request.args['val']
 
+    # cf) render_template (템플릿을 그린다)
     # val을 넘기는데 result라는 이름으로 넘겨라
     return render_template("sample1.html", result=val)
 

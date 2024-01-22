@@ -39,4 +39,4 @@ def delete(del_gno: int):
 def update(gno: int, content: str):
     for gb in guestbook:
         if gno == gb['gno']:
-            gb['content']
+            gb['content'] = content
