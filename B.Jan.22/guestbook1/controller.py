@@ -25,5 +25,12 @@ def write():
     return f.redirect("/")
 
 
+@app.route("/delete")
+def delete():
+    gno = f.request.args.get('gno', type=int)
+    m.delete(gno)
+    return f.redirect("/")
+
+
 # 서버를 개발자모드로 실행(개발자모드: 변경하면 자동 재실행)
 app.run(debug=True)

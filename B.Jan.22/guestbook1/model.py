@@ -45,3 +45,9 @@ def save(content: str):
     gb = dict(gno=gno, content=content, writeday=writeday)
     guestbook.append(gb)
     gno += 1
+
+
+def delete(gno: int):
+    for gb in guestbook:
+        if gb['gno'] == gno:
+            guestbook.remove(gb)

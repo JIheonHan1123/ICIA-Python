@@ -8,6 +8,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- html에서 서버에 요청하는 방법: form -->
     <form action="/write" method="post">
       <div class="mb-3 mt-3">
         <label for="content" class="from-label">방명록</label>
@@ -30,7 +31,11 @@
           <td>{{g.gno}}</td>
           <td>{{g.content}}</td>
           <td>{{g.writeday}}</td>
-          <td><button class="btn btn-danger">삭제</button></td>
+          <td>
+            <!-- get 방식은 form없이 button말고 a태그를 써줘도 된다. (post는 반드시 form태그가 필요하다) -->
+            <!-- 근데 이건 씹가라임. 애초에 get으로 삭제하면 안됨. Why? 여러번 실행해도 된다는 get의 정의에 어긋남. -->
+            <a href="/delete?gno={{g.gno}}" class="btn btn-danger">삭제</a>
+          </td>
         </tr>
         {% endfor %}
       </tbody>
