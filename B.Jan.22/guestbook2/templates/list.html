@@ -8,20 +8,20 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- html에서 서버에 요청하는 방법: form -->
     <form action="/write" method="post">
       <div class="mb-3 mt-3">
-        <label for="content" class="from-label">방명록</label>
-        <input type="text" class="from-controll" placeholder="내용 입력..." name="content" />
+        <input type="text" placeholder="이름 입력" name="gname" />
+        <input type="text" placeholder="내용 입력" name="content" />
+        <button type="submit" class="btn btn-primary">작성</button>
       </div>
-      <button type="submit" class="btn btn-primary">작성</button>
     </form>
     <table class="table table-hover">
       <thead>
         <tr>
           <th>번호</th>
+          <th>이름</th>
           <th>내용</th>
-          <th>날짜</th>
+          <th>작성일</th>
           <th></th>
         </tr>
       </thead>
@@ -29,12 +29,10 @@
         {% for g in gb %}
         <tr>
           <td>{{g.gno}}</td>
+          <td>{{g.gname}}</td>
           <td>{{g.content}}</td>
           <td>{{g.writeday}}</td>
           <td>
-            <!-- get 방식은 form없이 button말고 a태그를 써줘도 된다. (post는 반드시 form태그가 필요하다) -->
-            <!-- 근데 이건 씹가라임. 애초에 get으로 삭제하면 안됨. Why? 여러번 실행해도 된다는 get의 정의에 어긋남. -->
-            <!-- <a href="/delete?gno={{g.gno}}" class="btn btn-danger">삭제</a> -->
             <form action="/delete" method="post">
               <input type="hidden" name="gno" value="{{g.gno}}" />
               <button class="btn btn-danger">삭제</button>

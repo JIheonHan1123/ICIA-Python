@@ -25,9 +25,10 @@ def write():
     return f.redirect("/")
 
 
-@app.route("/delete")
+@app.route("/delete", methods=['post'])
 def delete():
-    gno = f.request.args.get('gno', type=int)
+    # gno = f.request.args.get('gno', type=int)
+    gno = f.request.form.get('gno', type=int)
     m.delete(gno)
     return f.redirect("/")
 
