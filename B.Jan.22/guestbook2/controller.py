@@ -1,4 +1,5 @@
 # 방명록 CRUD 연습
+# CRUD에서 U, D는 무조건 찾는 거에서 시작
 import model as m
 import flask as f
 app = f.Flask(__name__)
