@@ -1,4 +1,5 @@
-# 데이터 = model
+import datetime as d
+# model = 데이터 (+ 보통 함수까지 포함한 의미이다)
 # 모델설계 = 디자인
 
 # 방명록
@@ -27,3 +28,20 @@ gb2 = dict(gno=2, content="두번째 방명록", writeday="2024-01-22")
 
 guestbook.append(gb1)
 guestbook.append(gb2)
+
+
+gno = 3
+
+
+# 모델 = 데이터 +함수까지
+# 리스트 전부 출력 -스프링은 모델 함수이름이 정해져있다. 그 이름을 땡겨서 사용
+def findall():
+    return guestbook
+
+
+def save(content: str):
+    global gno
+    writeday = d.datetime.now().date()
+    gb = dict(gno=gno, content=content, writeday=writeday)
+    guestbook.append(gb)
+    gno += 1
