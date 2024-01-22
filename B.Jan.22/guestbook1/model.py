@@ -25,5 +25,5 @@ hap(val2=20, val1=10)
 gb2 = dict(gno=2, content="두번째 방명록", writeday="2024-01-22")
 
 
-list.append(gb1)
-list.append(gb2)
+guestbook.append(gb1)
+guestbook.append(gb2)
