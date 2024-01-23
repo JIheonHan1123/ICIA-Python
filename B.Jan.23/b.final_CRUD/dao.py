@@ -1,10 +1,10 @@
 
 board_list = []
-bno = 1
 
 board_list.append(dict(bno=1, title='aa', content='aaa', nickname='hhs', readcnt=0))
 board_list.append(dict(bno=2, title='bb', content='bbb', nickname='hhs', readcnt=0))
 board_list.append(dict(bno=3, title='cc', content='ccc', nickname='hhs', readcnt=0))
+bno = 4
 
 
 def save(title: str, content: str, nickname: str) -> bool:
@@ -17,3 +17,10 @@ def save(title: str, content: str, nickname: str) -> bool:
 
 def findall() -> list:
     return board_list
+
+
+def findone(bno: int) -> dict:
+    for board in board_list:
+        if bno == board['bno']:
+            return board
+    return None

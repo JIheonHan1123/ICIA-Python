@@ -11,7 +11,9 @@ def list():
 
 @app.route('/read')
 def read():
-    return f.render_template('read.html')
+    bno = f.request.args.get('bno', type=int)
+    board = dao.findone(bno)
+    return f.render_template('read.html', board=board)
 
 
 @app.route('/write')
