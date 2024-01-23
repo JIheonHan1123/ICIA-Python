@@ -22,5 +22,14 @@ def findall() -> list:
 def findone(bno: int) -> dict:
     for board in board_list:
         if bno == board['bno']:
+            board['readcnt'] += 1
             return board
     return None
+
+
+def delete(bno: int) -> bool:
+    for board in board_list:
+        if bno == board['bno']:
+            board_list.remove(board)
+            return True
+    return False

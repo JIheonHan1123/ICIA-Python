@@ -15,6 +15,7 @@
           <th>제목</th>
           <th>글쓴이</th>
           <th>조회수</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +25,12 @@
           <td><a href="/read?bno={{b.bno}}">{{b.title}}</a></td>
           <td>{{b.nickname}}</td>
           <td>{{b.readcnt}}</td>
+          <td>
+            <form action="/delete" method="post">
+              <input type="hidden" name="bno" value="{{b.bno}}" />
+              <button class="btn btn-danger">삭제</button>
+            </form>
+          </td>
         </tr>
         {% endfor %}
       </tbody>

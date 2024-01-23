@@ -12,8 +12,9 @@ def list():
 @app.route('/read')
 def read():
     bno = f.request.args.get('bno', type=int)
+    readcnt = f.request.args.get('readcnt', type=int)
     board = dao.findone(bno)
-    return f.render_template('read.html', board=board)
+    return f.render_template('read.html', board=board, readcnt=readcnt)
 
 
 @app.route('/write')
@@ -27,6 +28,13 @@ def write():
     content = f.request.form.get('content', type=str)
     nickname = f.request.form.get('nickname', type=str)
     dao.save(title=title, content=content, nickname=nickname)
+    return f.redirect('/')
+
+
+@app.route('/delete', methods=['post'])
+def delete():
+    bno = f.request.form.get('bno', type=int)
+    dao.delete(bno=bno)
     return f.redirect('/')
 
 
