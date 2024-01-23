@@ -15,10 +15,10 @@ gno = 2
 # 여기부터는 dao (모델을 조작)
 # Create
 # 코드는 항상 테스트해야하는데 귀찮아서 안함. 최소한 리턴걸어주자(ex) ->bool 이런식으로)
-def save(nickname: str, contnet: str) -> bool:
+def save(nickname: str, content: str) -> bool:
     global gno
     writeday = d.datetime.now().date()
-    gb = dict(gno=gno, nickname=nickname, contnet=contnet, writeday=writeday)
+    gb = dict(gno=gno, nickname=nickname, content=content, writeday=writeday)
     guestbook.append(gb)
     gno += 1
     return True
