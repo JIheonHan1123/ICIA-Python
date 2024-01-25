@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header,
+nav,
+footer {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  /*  */
+  border: 1px solid lightskyblue;
+  background-color: azure;
+}
+
+section {
+  min-height: 600px;
+  /*  */
+  float: left;
+  width: 1000px;
+  background-color: aliceblue;
+}
+
+main {
+  overflow: hidden;
+}
+
+aside {
+  float: left;
+  width: 100px;
+  height: 600px;
+  background-color: lavender;
+}
+
+form,
+.table {
+  padding: 10px;
+}
+
+.btn {
+  width: 100px;
+}
+
+input {
+  height: 25px;
+}
+
+input,
+textarea {
+  border-radius: 10px;
+  border: 0px;
+}
+
+label {
+  font-size: 13px;
+}
