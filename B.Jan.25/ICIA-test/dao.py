@@ -45,3 +45,5 @@ def delete(bno: int) -> bool:
             board_list.remove(board)
             return True
     return False
+
+# clone test
